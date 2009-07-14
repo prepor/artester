@@ -1,6 +1,48 @@
 = artester
 
-Description goes here.
+Tool for testing AR implementation independent components (like plugins).
+
+It recreate for every test tables (stores by sqlite in memory) and models.
+
+= Example
+
+	Artester.def :yaacl do
+
+	  model :user do
+	    definition do |t|
+	      t.string :name
+	      t.string :global_roles_list, :default => ''
+	    end
+    
+	    klass do
+	      include YAACL::User
+	    end
+	  end
+  
+	  model :role do
+	    definition do |t|
+	      t.integer :user_id
+	      t.string :entity_type
+	      t.integer :entity_id
+	      t.string :role
+	    end
+    
+	    klass do
+	      include YAACL::Role
+	    end
+	  end
+	end
+	
+  class UnitTest < Test::Unit::TestCase
+	  context "User creation" do
+	    setup do
+	      Artester[:yaacl].reload
+	      @author = User.create :name => 'Andrew'
+	    end
+		end
+	end
+	
+Now you can use User as usual AR-model.
 
 == Copyright
 
