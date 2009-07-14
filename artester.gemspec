@@ -19,7 +19,10 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "artester.gemspec",
      "lib/artester.rb",
+     "lib/artester/base.rb",
+     "lib/artester/model.rb",
      "test/artester_test.rb",
      "test/test_helper.rb"
   ]
