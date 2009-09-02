@@ -7,7 +7,7 @@ begin
     gem.name = "artester"
     gem.summary = %Q{TODO}
     gem.email = "ceo@prepor.ru"
-    gem.homepage = "http://github.com/preprocessor/artester"
+    gem.homepage = "http://github.com/prepor/artester"
     gem.authors = ["Andrew Rudenko"]
   end
 
