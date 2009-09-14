@@ -9,6 +9,7 @@ begin
     gem.email = "ceo@prepor.ru"
     gem.homepage = "http://github.com/prepor/artester"
     gem.authors = ["Andrew Rudenko"]
+    gem.add_dependency('activerecord')
   end
 
 rescue LoadError
