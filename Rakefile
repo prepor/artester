@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "artester"
-    gem.summary = %Q{TODO}
+    gem.summary = %Q{Tool for testing implementation independent AR components (like plugins)}
     gem.email = "ceo@prepor.ru"
     gem.homepage = "http://github.com/prepor/artester"
     gem.authors = ["Andrew Rudenko"]

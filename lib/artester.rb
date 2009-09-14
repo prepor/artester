@@ -3,14 +3,15 @@ require 'rubygems'
 require 'active_record'
 require 'active_support'
 
-require 'artester/base'
-require 'artester/model'
+
 
 module Artester
+  require 'artester/base'
+  require 'artester/model'
   class << self
     
     def init
-      ActiveRecord::Base.logger = Logger.new(File.dirname(__FILE__) + "/debug.log")
+      ActiveRecord::Base.logger = Logger.new(STDOUT) # File.dirname(__FILE__) + "/debug.log"
       ActiveRecord::Base.establish_connection(config)
     end
     
